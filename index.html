@@ -391,8 +391,8 @@
 </div>
 
 <script>
-const BUDGET_URL  = 'https://openbudget.uz/api/v2/info/statistics/board-budget-sum/53?regionId=12&districtId=160';
-const BOARD_URL   = 'https://openbudget.uz/api/v2/info/board/53?regionId=12&districtId=160&page=0&size=12&stage=PASSED&quality=';
+const BUDGET_URL  = 'proxy.php?type=budget';
+const BOARD_URL   = 'proxy.php?type=board';
 
 function fmt(n) {
   if (n >= 1_000_000_000) return (n / 1_000_000_000).toFixed(2) + ' млрд';
