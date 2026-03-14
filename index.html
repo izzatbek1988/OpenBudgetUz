@@ -391,8 +391,8 @@
 </div>
 
 <script>
-const BUDGET_URL  = '/api/budget';
-const BOARD_URL   = '/api/board';
+const BUDGET_URL  = 'https://openbudget.uz/api/v2/info/statistics/board-budget-sum/53?regionId=12&districtId=160';
+const BOARD_URL   = 'https://openbudget.uz/api/v2/info/board/53?regionId=12&districtId=160&page=0&size=12&stage=PASSED&quality=';
 
 function fmt(n) {
   if (n >= 1_000_000_000) return (n / 1_000_000_000).toFixed(2) + ' млрд';
@@ -566,7 +566,7 @@ function render({ budget, initiatives }) {
   } catch (e) {
     document.getElementById('app').innerHTML = `
       <div class="header"><div class="badge">🏛 Ochiq Byudjet</div><h1>Қўшкўпир тумани</h1></div>
-      <div class="error-box">⚠️ Ma'lumotlarni yuklashda xatolik yuz berdi.<br><small>${e.message}</small></div>
+      <div class="error-box">⚠️ Ma'lumotlarni yuklashda xatolik yuz berdi.<br><small>${e.message}</small><br><br><small>Eslatma: openbudget.uz faqat O'zbekiston ichidan ochiladi.</small></div>
     `;
   }
 })();
